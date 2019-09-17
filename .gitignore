@@ -1,0 +1,6 @@
+__pycache__
+logs
+.vscode
+.ipynb_checkpoints
+.empty
+data/pytorch/*

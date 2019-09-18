@@ -25,6 +25,12 @@ In the `run/resnet-56` folder we provide an example to show how to use the code.
 
 If you want to run the code, you may need install [jupyter notebook](https://jupyter.org/)
 
+### TODO
+
+- [x] Basic running example.
+- [ ] PyTorch 1.2 compatibility test.
+- [ ] ResNet-50 pruned models.
+
 ### Citation
 
 If you use this code for your research, please cite our papers.

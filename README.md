@@ -5,7 +5,7 @@
 
 This repo contains required scripts to reproduce results from paper:
 
-Gate Decorator: Global Filter Pruning Method for Accelerating Deep Convolutional Neural Networks, in NeurIPS 2019.
+_Gate Decorator: Global Filter Pruning Method for Accelerating Deep Convolutional Neural Networks_
 
 ### Requirements
 
@@ -24,9 +24,9 @@ The code has been tested only with PyTorch 1.0. We will test it with newer versi
 
 In the `run/resnet-56` folder we provide an example to show how to use the code.
 
-If you want to run the code, you may need install [jupyter notebook](https://jupyter.org/)
+If you want to run the demo code, you may need install [jupyter notebook](https://jupyter.org/)
 
-### TODO
+### Todo
 
 - [x] Basic running example.
 - [ ] PyTorch 1.2 compatibility test.
@@ -34,7 +34,7 @@ If you want to run the code, you may need install [jupyter notebook](https://jup
 
 ### Citation
 
-If you use this code for your research, please cite our papers.
+If you use this code for your research, please cite our paper:
 ```
 @inproceedings{zhonghui2019gate,
   title={Gate Decorator: Global Filter Pruning Method for Accelerating Deep Convolutional Neural Networks},
@@ -43,7 +43,7 @@ If you use this code for your research, please cite our papers.
           Jinmian Ye and
           Meng Ma and
           Ping Wang},
-  booktitle={Advances in Neural Information Processing Systems},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
   year={2019}
 }
 ```

@@ -1,6 +1,7 @@
 # Gate Decorator (NeurIPS 2019)
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/NifTK/NiftyNet/blob/dev/LICENSE)
+[![License CC BY-NC-SA 4.0](https://img.shields.io/badge/license-CC4.0-blue.svg)](https://raw.githubusercontent.com/nvlabs/SPADE/master/LICENSE.md)
+![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg)
 
 This repo contains required scripts to reproduce results from paper:
 
@@ -29,7 +30,7 @@ If you want to run the code, you may need install [jupyter notebook](https://jup
 
 - [x] Basic running example.
 - [ ] PyTorch 1.2 compatibility test.
-- [ ] ResNet-50 pruned models.
+- [ ] ResNet-50 pruned model.
 
 ### Citation
 

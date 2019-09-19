@@ -9,27 +9,26 @@ _Gate Decorator: Global Filter Pruning Method for Accelerating Deep Convolutiona
 
 ### Requirements
 
-python 3.6+ and PyTorch 1.0
-
-The code has been tested only with PyTorch 1.0. We will test it with newer version later.
+python 3.6+ and PyTorch 1.0+
 
 ### Installation
 
 1. clone the code
 2. pip install --upgrade git+https://github.com/youzhonghui/pytorch-OpCounter.git
 3. pip install tqdm
-4. mkdir data
 
 ### How to use
 
-In the `run/resnet-56` folder we provide an example to show how to use the code.
+In the `run/resnet-56` folder, we provide an example which **reduces the FLOPs of resnet-56 by 70%**, but still maintains **93.15%** accuracy on CIFAR-10:
+1. The `run/resnet-56/resnet56_prune.ipynb` prunes the network with Tick-Tock framework.
+2. The `run/resnet-56/finetune.ipynb` shows how to finetune the pruned network to get better results.
 
-If you want to run the demo code, you may need install [jupyter notebook](https://jupyter.org/)
+If you want to run the demo code, you may need to install [jupyter notebook](https://jupyter.org/)
 
 ### Todo
 
 - [x] Basic running example.
-- [ ] PyTorch 1.2 compatibility test.
+- [x] PyTorch 1.2 compatibility test.
 - [ ] ResNet-50 pruned model.
 
 ### Citation

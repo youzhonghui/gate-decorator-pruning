@@ -19,11 +19,19 @@ python 3.6+ and PyTorch 1.0+
 
 ### How to use
 
+#### Notebook (ResNet-56)
+
 In the `run/resnet-56` folder, we provide an example which **reduces the FLOPs of resnet-56 by 70%**, but still maintains **93.15%** accuracy on CIFAR-10:
 1. The `run/resnet-56/resnet56_prune.ipynb` prunes the network with Tick-Tock framework.
 2. The `run/resnet-56/finetune.ipynb` shows how to finetune the pruned network to get better results.
 
 If you want to run the demo code, you may need to install [jupyter notebook](https://jupyter.org/)
+
+#### Command line (VGG-16)
+
+In the `run/vgg16` folder, we provide an example executed by command line, which reduces the FLOPs of VGG-16 by 90% (98% parameters), and keep 92.07% accuracy on CIFAR-10.
+
+The instructions can be found [here](https://github.com/youzhonghui/gate-decorator-pruning/tree/master/run/vgg16)
 
 ### Todo
 

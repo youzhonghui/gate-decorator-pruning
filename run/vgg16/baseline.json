@@ -1,0 +1,40 @@
+{
+    "base": {
+        "task_name": "vgg16_cifar10",
+        "cuda": true,
+        "seed": 0,
+        "checkpoint_path": "",
+        "epoch": 0,
+        "model_saving_interval": 80,
+        "multi_gpus": false,
+        "fp16": false
+    },
+    "model": {
+        "name": "cifar.vgg16",
+        "num_class": 10,
+        "pretrained": false
+    },
+    "train": {
+        "trainer": "normal",
+        "max_epoch": 160,
+        "optim": "sgd",
+        "steplr": [
+            [80, 0.1],
+            [120, 0.01],
+            [160, 0.001]
+        ],
+        "weight_decay": 5e-4,
+        "momentum": 0.9,
+        "nesterov": false
+    },
+    "data": {
+        "type": "cifar10",
+        "shuffle": true,
+        "batch_size": 128,
+        "test_batch_size": 128,
+        "num_workers": 8
+    },
+    "loss": {
+        "criterion": "softmax"
+    }
+}

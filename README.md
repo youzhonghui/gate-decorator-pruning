@@ -29,6 +29,7 @@ If you want to run the demo code, you may need to install [jupyter notebook](htt
 
 - [x] Basic running example.
 - [x] PyTorch 1.2 compatibility test.
+- [x] The command-line execution demo.
 - [ ] ResNet-50 pruned model.
 
 ### Citation

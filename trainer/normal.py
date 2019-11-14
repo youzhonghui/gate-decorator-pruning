@@ -69,7 +69,7 @@ class NormalTrainer():
         begin = time()
 
         pack.optimizer.zero_grad()
-        with tqdm(total=len(pack.train_loader)) as pbar:
+        with tqdm(total=len(pack.train_loader), disable=mute) as pbar:
             total_iter = len(pack.train_loader)
             for cur_iter, (data, label) in enumerate(pack.train_loader):
                 if iter_hook is not None:

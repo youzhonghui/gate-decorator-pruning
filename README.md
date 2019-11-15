@@ -7,6 +7,8 @@ This repo contains required scripts to reproduce results from paper:
 
 _Gate Decorator: Global Filter Pruning Method for Accelerating Deep Convolutional Neural Networks_
 
+-------
+
 ### Requirements
 
 python 3.6+ and PyTorch 1.0+
@@ -19,7 +21,7 @@ python 3.6+ and PyTorch 1.0+
 
 ### How to use
 
-#### Notebook (ResNet-56)
+#### (1). Notebook (ResNet-56)
 
 In the `run/resnet-56` folder, we provide an example which **reduces the FLOPs of resnet-56 by 70%**, but still maintains **93.15%** accuracy on CIFAR-10:
 1. The `run/resnet-56/resnet56_prune.ipynb` prunes the network with Tick-Tock framework.
@@ -27,17 +29,22 @@ In the `run/resnet-56` folder, we provide an example which **reduces the FLOPs o
 
 If you want to run the demo code, you may need to install [jupyter notebook](https://jupyter.org/)
 
-#### Command line (VGG-16)
+#### (2). Command line (VGG-16)
 
 In the `run/vgg16` folder, we provide an example executed by command line, which reduces the FLOPs of VGG-16 by 90% (98% parameters), and keep 92.07% accuracy on CIFAR-10.
 
 The instructions can be found [here](https://github.com/youzhonghui/gate-decorator-pruning/tree/master/run/vgg16)
+
+#### (3). Save and load the pruned model
+
+In the `run/load_pruned_model/` folder, we provide an [example](https://github.com/youzhonghui/gate-decorator-pruning/blob/master/run/load_pruned_model/model_load_demo.ipynb) shows how to save and load a pruned model (VGG-16 with only 0.3M float parameters).
 
 ### Todo
 
 - [x] Basic running example.
 - [x] PyTorch 1.2 compatibility test.
 - [x] The command-line execution demo.
+- [x] Save and load the pruned model.
 - [ ] ResNet-50 pruned model.
 
 ### Citation

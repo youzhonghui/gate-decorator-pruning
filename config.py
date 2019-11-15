@@ -32,13 +32,42 @@ def parse():
     print(json.dumps(config, indent=4, sort_keys=True))
     return config
 
-cfg = None
-if cfg is None:
-    try:
-        cfg = parse()
-    except:
-        print('** Assert in demo mode. **')
+class Singleton(object):
+    _instance = None
+    def __new__(cls, *args, **kw):
+        if not cls._instance:
+            cls._instance = super(Singleton, cls).__new__(cls, *args, **kw)  
+        return cls._instance 
+
+class Config(Singleton):
+    def __init__(self):
+        self._cfg = dotdict({})
+        try:
+            self._cfg = parse()
+        except:
+            pass
+
+    def __getattr__(self, name):
+        if name == '_cfg':
+            super().__setattr__(name)
+        else:
+            return self._cfg.__getattr__(name)
+
+    def __setattr__(self, name, val):
+        if name == '_cfg':
+            super().__setattr__(name, val)
+        else:
+            self._cfg.__setattr__(name, val)
+
+    def __delattr__(self, name):
+        return self._cfg.__delitem__(name)
+
+    def copy(self, new_config):
+        self._cfg = make_as_dotdict(new_config)
+
+cfg = Config()
 
 def parse_from_dict(d):
     global cfg
-    cfg = make_as_dotdict(d)
+    assert type(d) == dict
+    cfg.copy(d)

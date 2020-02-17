@@ -39,7 +39,7 @@ class Logger():
             with open(self.logfile, 'w') as fp:
                 json.dump({}, fp)
             with open(self.cfgfile, 'w') as fp:
-                json.dump(cfg, fp)
+                json.dump(cfg.raw(), fp)
 
     def save_record(self, epoch, record):
         with open(self.logfile) as fp:

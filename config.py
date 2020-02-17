@@ -65,6 +65,9 @@ class Config(Singleton):
     def copy(self, new_config):
         self._cfg = make_as_dotdict(new_config)
 
+    def raw(self):
+        return self._cfg
+
 cfg = Config()
 
 def parse_from_dict(d):

@@ -60,7 +60,7 @@ class Logger():
         cfg.base.epoch = epoch
         cfg.base.checkpoint_path = saving_path
         with open(self.cfgfile, 'w') as fp:
-            json.dump(cfg, fp)
+            json.dump(cfg.raw(), fp)
 
 logger = None
 if logger is None:
